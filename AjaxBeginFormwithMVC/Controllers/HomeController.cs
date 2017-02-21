@@ -21,5 +21,11 @@ namespace AjaxBeginFormwithMVC.Controllers
             ViewBag.Records = "Name : " + obj.Name + " City:  " + obj.City + " Addreess: " + obj.Address;
             return PartialView("EmployeeMaster");
         }
+
+        [HttpPost]
+        public void Edit(EmpModel obj)
+        {
+            var x = obj;
+        }
     }
 }
