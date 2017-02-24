@@ -64,3 +64,10 @@ C:\Users\Marco\Documents\GitHub\MVC-AjaxBeginForm\AjaxBeginFormwithMVC\bin\Syste
 C:\Users\Marco\Documents\GitHub\MVC-AjaxBeginForm\AjaxBeginFormwithMVC\obj\Debug\AjaxBeginFormwithMVC.csprojResolveAssemblyReference.cache
 C:\Users\Marco\Documents\GitHub\MVC-AjaxBeginForm\AjaxBeginFormwithMVC\obj\Debug\AjaxBeginFormwithMVC.dll
 C:\Users\Marco\Documents\GitHub\MVC-AjaxBeginForm\AjaxBeginFormwithMVC\obj\Debug\AjaxBeginFormwithMVC.pdb
+C:\Users\Marco\Documents\GitHub\MVC-AjaxBeginForm\AjaxBeginFormwithMVC\bin\Antlr3.Runtime.dll
+C:\Users\Marco\Documents\GitHub\MVC-AjaxBeginForm\AjaxBeginFormwithMVC\bin\Newtonsoft.Json.dll
+C:\Users\Marco\Documents\GitHub\MVC-AjaxBeginForm\AjaxBeginFormwithMVC\bin\System.Web.Optimization.dll
+C:\Users\Marco\Documents\GitHub\MVC-AjaxBeginForm\AjaxBeginFormwithMVC\bin\WebGrease.dll
+C:\Users\Marco\Documents\GitHub\MVC-AjaxBeginForm\AjaxBeginFormwithMVC\bin\Antlr3.Runtime.pdb
+C:\Users\Marco\Documents\GitHub\MVC-AjaxBeginForm\AjaxBeginFormwithMVC\bin\Newtonsoft.Json.xml
+C:\Users\Marco\Documents\GitHub\MVC-AjaxBeginForm\AjaxBeginFormwithMVC\bin\System.Web.Optimization.xml
