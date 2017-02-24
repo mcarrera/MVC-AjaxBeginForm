@@ -23,9 +23,10 @@ namespace AjaxBeginFormwithMVC.Controllers
         }
 
         [HttpPost]
-        public void Edit(EmpModel obj)
+        public ActionResult Edit(EmpModel obj)
         {
             var x = obj;
+            return Json(new HttpStatusCodeResult(System.Net.HttpStatusCode.OK));
         }
     }
 }
