@@ -1,19 +1,38 @@
-﻿@model AjaxBeginFormwithMVC.Models.EmpModel
+﻿@model AjaxBeginFormwithMVC.Models.Employee
 
 @{
     ViewBag.Title = "www.compilemode.com";
 }
-<script src="~/Scripts/jquery-1.10.2.js"></script>
-<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-top-center",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "400",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+    });
+</script>
 <div id="divEmp">
 
 
-    @*@using (Ajax.BeginForm("EmployeeMaster", "Home", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "divEmp" }))*@
     @using (Ajax.BeginForm(actionName: "Edit",
-                                            controllerName: "Home",
-                                            routeValues: null,
-                                            ajaxOptions: new AjaxOptions() { HttpMethod = "POST", OnSuccess = "RecordUpdated", OnFailure = "AjaxFailed" },
-                                            htmlAttributes: new { id = "editForm" }))
+                        controllerName: "Home",
+                        routeValues: null,
+                        ajaxOptions: new AjaxOptions() { HttpMethod = "POST"},
+                        htmlAttributes: new { id = "editForm" }))
     {
         @Html.AntiForgeryToken()
 
@@ -31,6 +50,7 @@
 
             <div class="form-group">
                 @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" })
+
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
@@ -60,33 +80,15 @@
         </div>
     }
 </div>
-<script src="~/Scripts/jquery-1.10.2.min.js"></script>
-<script src="~/Scripts/jquery.validate.min.js"></script>
-<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        toastr.options = {
-            "closeButton": false,
-            "debug": false,
-            "newestOnTop": false,
-            "progressBar": false,
-            "positionClass": "toast-top-center",
-            "preventDuplicates": false,
-            "onclick": null,
-            "showDuration": "300",
-            "hideDuration": "1000",
-            "timeOut": "5000",
-            "extendedTimeOut": "1000",
-            "showEasing": "swing",
-            "hideEasing": "linear",
-            "showMethod": "fadeIn",
-            "hideMethod": "fadeOut"
-        }
-    });
-</script>
+
+
 <script>
-    function RecordUpdated(e,customText)
-    {
-        toastr["info"]("Information saved");
+    function OnSuccess(e) {
+        console.log(e);
+        toastr["info"]("Success!");
+    }
+    function OnFailure(e) {
+        console.log(e);
+        toastr["error"]("Error!");
     }
 </script>

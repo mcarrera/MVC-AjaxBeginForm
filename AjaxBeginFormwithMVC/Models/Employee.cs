@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 
 namespace AjaxBeginFormwithMVC.Models
 {
-   public class EmpModel
+   public class Employee
     {
 
         [Required]
+        [Display(Name = "Name (fail to simulate a server error)")]
         public string Name { get; set; }
-        [Required]
+    
         public string City { get; set; }
-        [Required]
+        
         public string Address { get; set; }
     }
 }

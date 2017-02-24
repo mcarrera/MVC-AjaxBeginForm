@@ -16,17 +16,16 @@ namespace AjaxBeginFormwithMVC.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult EmployeeMaster(EmpModel obj)
+        public ActionResult EmployeeMaster(Employee obj)
         {
             ViewBag.Records = "Name : " + obj.Name + " City:  " + obj.City + " Addreess: " + obj.Address;
             return PartialView("EmployeeMaster");
         }
 
         [HttpPost]
-        public ActionResult Edit(EmpModel obj)
+        public ActionResult Edit(Employee obj)
         {
-            var x = obj;
-            return Json(new HttpStatusCodeResult(System.Net.HttpStatusCode.OK));
+            return obj.Name.ToLower() == "fail" ? JavaScript("OnFailure('Failed');") : JavaScript("OnSuccess('OK');");
         }
     }
 }
