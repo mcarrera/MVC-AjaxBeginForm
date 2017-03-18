@@ -11,11 +11,11 @@ namespace AjaxBeginFormwithMVC.Models
     {
 
         [Required]
-        [Display(Name = "Name (fail to simulate a server error)")]
-        public string Name { get; set; }
+        [Display(Name = "First Name (fail to throw an error)")]
+        public string FirstName { get; set; }
     
-        public string City { get; set; }
+        public string LastName { get; set; }
         
-        public string Address { get; set; }
+        public string Comments { get; set; }
     }
 }

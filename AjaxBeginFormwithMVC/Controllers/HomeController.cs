@@ -11,21 +11,21 @@ namespace AjaxBeginFormwithMVC.Controllers
     {
         // GET: Home
         [HttpGet]
-        public ActionResult EmployeeMaster()
+        public ActionResult Employee()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult EmployeeMaster(Employee obj)
+        public ActionResult Employee(Employee employee)
         {
-            ViewBag.Records = "Name : " + obj.Name + " City:  " + obj.City + " Addreess: " + obj.Address;
-            return PartialView("EmployeeMaster");
+            ViewBag.Records = "Name : " + employee.FirstName + " City:  " + employee.LastName + " Addreess: " + employee.Comments;
+            return PartialView("Employee");
         }
 
         [HttpPost]
-        public ActionResult Edit(Employee obj)
+        public ActionResult Edit(Employee employee)
         {
-            return obj.Name.ToLower() == "fail" ? JavaScript("OnFailure('Failed');") : JavaScript("OnSuccess('OK');");
+            return employee.FirstName.ToLower() == "fail" ? JavaScript("OnFailure('Failed');") : JavaScript("OnSuccess('OK');");
         }
     }
 }
